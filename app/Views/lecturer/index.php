@@ -47,7 +47,7 @@
                                     </i>
                                     Edit
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="<?= site_url("/dosen/delete/{$value['lecturer_id']}") ?>">
+                                <a class="btn btn-danger btn-sm" href="<?= site_url("/dosen/delete/{$value['lecturer_id']}") ?>" id="deleteButton">
                                     <i class="fas fa-trash">
                                     </i>
                                     Delete
@@ -60,5 +60,15 @@
         </div>
     </div>
 </div>
-
+<script>
+    document.getElementById('deleteButton').addEventListener('click', function(event) {
+        event.preventDefault();
+        <?php foreach ($lecturers as $key => $value) { ?>
+        let userConfirmed = confirm('Anda yakin ingin menghapus data <?= $value['name'] ?>?');
+        <?php } ?>
+        if (userConfirmed) {
+            window.location.href = this.href;
+        }
+    });
+</script>
 <?= $this->endSection() ?>

@@ -71,7 +71,6 @@
         let userConfirmed = confirm('Anda yakin ingin menghapus data <?= $value['name'] ?>?');
         <?php } ?>
         if (userConfirmed) {
-            // Melanjutkan ke URL delete
             window.location.href = this.href;
         }
     });

@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\StudentModel;
+use App\Models\FacultyModel;
+use App\Models\StudyProgramModel;
 use Dompdf\Dompdf;
 
 class StudentController extends BaseController
@@ -19,8 +21,13 @@ class StudentController extends BaseController
 
     public function create()
     {
+        $facultyModel = new FacultyModel();
+        $studyProgramModel = new StudyProgramModel();
+
         $data = [
             'title' => 'Buat Data Mahasiswa',
+            'facultys' => $facultyModel->findAll(),
+            'studyPrograms' => $studyProgramModel->findAll()
         ];
         return view('student/create', $data);
     }
@@ -65,12 +72,16 @@ class StudentController extends BaseController
 
     public function edit($id)
     {
+        $facultyModel = new FacultyModel();
+        $studyProgramModel = new StudyProgramModel();
         $studentModel = new StudentModel();
         $student = $studentModel->find($id);
 
         $data = [
             'title' => 'Edit Data Mahasiswa',
-            'student' => $student
+            'student' => $student,
+            'facultys' => $facultyModel->findAll(),
+            'studyPrograms' => $studyProgramModel->findAll()
         ];
         return view('student/edit', $data);
     }

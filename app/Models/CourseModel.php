@@ -15,8 +15,8 @@ class CourseModel extends Model
 
     protected $allowedFields = ['lecturer_id', 'name', 'course_code', 'semester_credit_unit', 'semester'];
 
-    public function lecturer()
-    {
-        return $this->belongsTo('App\Models\LecturerModel', 'lecturer_id', 'lecturer_id');
-    }
+    // public function lecturer()
+    // {
+    //     return $this->belongsTo('App\Models\LecturerModel', 'lecturer_id', 'lecturer_id');
+    // }
 }

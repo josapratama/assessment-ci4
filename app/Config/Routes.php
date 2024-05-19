@@ -19,6 +19,42 @@ $routes->get('/home', 'HomepageController::index');
 $routes->get('/info', 'HomepageController::info');
 $routes->get('/contact', 'HomepageController::contact');
 
+$routes->get('/fakultas', 'FacultyController::index');
+$routes->get('/fakultas/create', 'FacultyController::create');
+$routes->post('/fakultas', 'FacultyController::store');
+$routes->get('/fakultas/edit/(:num)', 'FacultyController::edit/$1');
+$routes->post('/fakultas/update/(:num)', 'FacultyController::update/$1');
+$routes->get('/fakultas/delete/(:num)', 'FacultyController::delete/$1');
+$routes->get('/fakultas/detail/(:num)', 'FacultyController::view/$1');
+$routes->get('/fakultas/printpdf', 'FacultyController::printpdf');
+
+$routes->get('/gedung', 'BuildingController::index');
+$routes->get('/gedung/create', 'BuildingController::create');
+$routes->post('/gedung', 'BuildingController::store');
+$routes->get('/gedung/edit/(:num)', 'BuildingController::edit/$1');
+$routes->post('/gedung/update/(:num)', 'BuildingController::update/$1');
+$routes->get('/gedung/delete/(:num)', 'BuildingController::delete/$1');
+$routes->get('/gedung/detail/(:num)', 'BuildingController::view/$1');
+$routes->get('/gedung/printpdf', 'BuildingController::printpdf');
+
+$routes->get('/prodi', 'StudyProgramController::index');
+$routes->get('/prodi/create', 'StudyProgramController::create');
+$routes->post('/prodi', 'StudyProgramController::store');
+$routes->get('/prodi/edit/(:num)', 'StudyProgramController::edit/$1');
+$routes->post('/prodi/update/(:num)', 'StudyProgramController::update/$1');
+$routes->get('/prodi/delete/(:num)', 'StudyProgramController::delete/$1');
+$routes->get('/prodi/detail/(:num)', 'StudyProgramController::view/$1');
+$routes->get('/prodi/printpdf', 'StudyProgramController::printpdf');
+
+$routes->get('/ruang', 'RoomCOntroller::index');
+$routes->get('/ruang/create', 'RoomCOntroller::create');
+$routes->post('/ruang', 'RoomCOntroller::store');
+$routes->get('/ruang/edit/(:num)', 'RoomCOntroller::edit/$1');
+$routes->post('/ruang/update/(:num)', 'RoomCOntroller::update/$1');
+$routes->get('/ruang/delete/(:num)', 'RoomCOntroller::delete/$1');
+$routes->get('/ruang/detail/(:num)', 'RoomCOntroller::view/$1');
+$routes->get('/ruang/printpdf', 'RoomCOntroller::printpdf');
+
 $routes->get('/mahasiswa', 'StudentController::index');
 $routes->get('/mahasiswa/create', 'StudentController::create');
 $routes->post('/mahasiswa', 'StudentController::store');
@@ -45,6 +81,26 @@ $routes->post('/makul/update/(:num)', 'CourseController::update/$1');
 $routes->get('/makul/delete/(:num)', 'CourseController::delete/$1');
 $routes->get('/makul/detail/(:num)', 'CourseController::view/$1');
 $routes->get('/makul/printpdf', 'CourseController::printpdf');
+
+$routes->get('/jadwal', 'ScheduleController::index');
+$routes->get('/jadwal/create', 'ScheduleController::create');
+$routes->post('/jadwal', 'ScheduleController::store');
+$routes->get('/jadwal/edit/(:num)', 'ScheduleController::edit/$1');
+$routes->post('/jadwal/update/(:num)', 'ScheduleController::update/$1');
+$routes->get('/jadwal/delete/(:num)', 'ScheduleController::delete/$1');
+$routes->get('/jadwal/detail/(:num)', 'ScheduleController::view/$1');
+$routes->get('/jadwal/printpdf', 'ScheduleController::printpdf');
+
+$routes->get('/kelas', 'ClassController::index');
+$routes->get('/kelas/create', 'ClassController::create');
+$routes->post('/kelas', 'ClassController::store');
+$routes->get('/kelas/edit/(:num)', 'ClassController::edit/$1');
+$routes->post('/kelas/update/(:num)', 'ClassController::update/$1');
+$routes->get('/kelas/delete/(:num)', 'ClassController::delete/$1');
+$routes->get('/kelas/detail/(:num)', 'ClassController::view/$1');
+$routes->get('/kelas/printpdf', 'ClassController::printpdf');
+$routes->get('/kelas/tambah-siswa/(:num)', 'ClassController::addStudentForm/$1');
+$routes->post('/kelas/tambah-siswa/(:num)', 'ClassController::addStudentToClass/$1/$2');
 
 $routes->get('/penilaian', 'AssessmentController::index');
 $routes->get('/penilaian/create', 'AssessmentController::create');

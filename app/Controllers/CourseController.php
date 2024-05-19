@@ -59,7 +59,7 @@ class CourseController extends BaseController
             ];
 
             $courseModel->save($data);
-            session()->setFlashdata('message', 'Data makul berhasil disimpan.');
+            session()->setFlashdata('message', 'Data mata kuliah berhasil disimpan.');
 
             return redirect()->to('/makul');
         }

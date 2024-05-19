@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateAssessmentsTable extends Migration
+class TbAssessments extends Migration
 {
     public function up()
     {

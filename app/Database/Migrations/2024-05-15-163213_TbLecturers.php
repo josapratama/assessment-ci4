@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateLecturersTable extends Migration
+class TbLecturers extends Migration
 {
     public function up()
     {

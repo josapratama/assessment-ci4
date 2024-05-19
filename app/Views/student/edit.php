@@ -24,13 +24,29 @@
                     <label for="exampleInputName">Nama</label>
                     <input type="text" name="name" class="form-control" id="exampleInputName" value="<?= $student['name'] ?>">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputFaculty">Fakultas</label>
-                    <input type="text" name="faculty" class="form-control" id="exampleInputFaculty" value="<?= $student['faculty'] ?>">
+                <div class="form-group row">
+                    <label for="inputFaculty" class="col-sm-4 col-form-label">Fakultas</label>
+                    <div class="col-sm-8">
+                        <select name="faculty" id="inputFaculty" class="form-control" value="<?= $student['faculty'] ?>">
+                            <option value="">Pilih Fakultas</option>
+                            <?php foreach ($facultys as $faculty) : ?>
+                                <?php $selected = ($student['faculty'] == $faculty['name']) ? 'selected' : ''; ?>
+                                <option value="<?= $faculty['name'] ?>" <?= $selected ?>><?= $faculty['name'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputStudyProgram">Program Study</label>
-                    <input type="text" name="study_program" class="form-control" id="exampleInputStudyProgram" value="<?= $student['study_program'] ?>">
+                <div class="form-group row">
+                    <label for="inputStudyProgram" class="col-sm-4 col-form-label">Program Studi</label>
+                    <div class="col-sm-8">
+                        <select name="study_program" id="inputStudyProgram" class="form-control" value="<?= $student['study_program'] ?>">
+                            <option value="">Pilih Program Studi</option>
+                            <?php foreach ($studyPrograms as $studyProgram) : ?>
+                                <?php $selected = ($student['study_program'] == $studyProgram['name']) ? 'selected' : ''; ?>
+                                <option value="<?= $studyProgram['name'] ?>" <?= $selected ?>><?= $studyProgram['name'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputHomeAddress">Alamat</label>

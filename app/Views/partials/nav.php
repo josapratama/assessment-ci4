@@ -16,15 +16,15 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= site_url('/mahasiswa') ?>" class="nav-link">
+          <a href="<?= site_url('/gedung') ?>" class="nav-link">
             <i class="nav-icon fas fa-building"></i>
             <p>
-              Fakultas
+              Gedung
             </p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= site_url('/mahasiswa') ?>" class="nav-link">
+          <a href="<?= site_url('/ruang') ?>" class="nav-link">
             <i class="nav-icon fas fa-door-open"></i>
             <p>
               Ruang
@@ -32,7 +32,15 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= site_url('/mahasiswa') ?>" class="nav-link">
+          <a href="<?= site_url('/fakultas') ?>" class="nav-link">
+            <i class="nav-icon fas fa-university"></i>
+            <p>
+              Fakultas
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= site_url('/prodi') ?>" class="nav-link">
             <i class="nav-icon fas fa-graduation-cap"></i>
             <p>
               Program Studi
@@ -60,6 +68,14 @@
             <i class="nav-icon fas fa-book"></i>
             <p>
               Mata Kuliah
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= site_url('/kelas') ?>" class="nav-link">
+            <i class="nav-icon fas fa-calendar-alt"></i>
+            <p>
+              Kelas
             </p>
           </a>
         </li>

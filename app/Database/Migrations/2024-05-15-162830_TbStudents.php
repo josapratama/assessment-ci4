@@ -12,7 +12,7 @@ class TbStudents extends Migration
             'student_id'      => [
                 'type'           => 'INT',
                 'constraint'     => 10,
-                'unsigned'       => true,
+                'unsigned'       => false,
                 'auto_increment' => true,
             ],
             'nim' => [

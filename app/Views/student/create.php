@@ -29,13 +29,27 @@
                     <label for="exampleInputName">Nama</label>
                     <input type="text" name="name" class="form-control" id="exampleInputName">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputFaculty">Fakultas</label>
-                    <input type="text" name="faculty" class="form-control" id="exampleInputFaculty">
+                <div class="form-group row">
+                    <label for="inputFaculty" class="col-sm-4 col-form-label">Fakultas</label>
+                    <div class="col-sm-8">
+                        <select name="faculty" id="inputFaculty" class="form-control">
+                            <option value="">Pilih Fakultas</option>
+                            <?php foreach ($facultys as $faculty) : ?>
+                                <option value="<?= $faculty['name'] ?>"><?= $faculty['name'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputStudyProgram">Program Study</label>
-                    <input type="text" name="study_program" class="form-control" id="exampleInputStudyProgram">
+                <div class="form-group row">
+                    <label for="inputStudyProgram" class="col-sm-4 col-form-label">Program Studi</label>
+                    <div class="col-sm-8">
+                        <select name="study_program" id="inputStudyProgram" class="form-control">
+                            <option value="">Pilih Program Studi</option>
+                            <?php foreach ($studyPrograms as $studyProgram) : ?>
+                                <option value="<?= $studyProgram['name'] ?>"><?= $studyProgram['name'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputHomeAddress">Alamat</label>
